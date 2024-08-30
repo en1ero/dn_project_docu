@@ -1,30 +1,14 @@
-# Welcome to MkDocs
+# Overview
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+## Raw-Denoising-Project
+Training of [SCUNet](https://github.com/cszn/SCUNet) for 4-channel RAW image denoising and comparison to [DnCNN](https://github.com/cszn/DnCNN).^
+The Project went from May to August 2024.
 
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
-
-
-``` py
-import tensorflow as tf
-```
-
-``` py title="bubble_sort.py"
-def bubble_sort(items):
-    for i in range(len(items)):
-        for j in range(len(items) - 1 - i):
-            if items[j] > items[j + 1]:
-                items[j], items[j + 1] = items[j + 1], items[j]
-```
+## This Website's Content
+* How to replicate this project
+* Use of virtual environments (venv)
+* Everything Python
+* Everything MATLAB
+* General tips for taining of neural networks
+* List of trained models
+* Showcase of results
