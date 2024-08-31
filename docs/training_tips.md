@@ -174,3 +174,24 @@ Automatic info inside the `/model_zoo` next to each trained model which looks so
     "final_val_loss": 0.028505839593708514
 }
 ```
+
+## Bonus
+If you ever need to prevent your computer from shutting down, use this batch script:
+```batch
+@echo off
+setlocal enabledelayedexpansion
+
+rem Ermitteln der aktuellen Stunde
+set "currentHour=%TIME:~0,2%"
+set "currentHour=!currentHour: =!" rem Leerzeichen entfernen
+
+rem Berechnen der Start- und Endzeit für die nächsten 18 Stunden
+set /a "startHour=!currentHour!"
+set /a "endHour=(startHour + 18) %% 24"
+
+rem Aktualisieren der "Active Hours" im Registrierungseditor
+reg add "HKLM\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" /v "ActiveHoursStart" /t REG_DWORD /d !startHour! /f
+reg add "HKLM\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" /v "ActiveHoursEnd" /t REG_DWORD /d !endHour! /f
+
+echo Die "Active Hours" wurden auf !startHour! bis !endHour! Uhr festgelegt.
+```
