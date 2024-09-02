@@ -1,0 +1,26 @@
+# Core Dependencies
+mkdocs-material==9.5.33
+
+# MkDocs Plugins & Extensions
+mkdocs-get-deps
+pymdown-extensions
+
+# Markdown & Template Rendering
+Markdown
+Jinja2
+
+# Utility Libraries
+mergedeep
+packaging
+watchdog
+
+# HTTP & Request Libraries
+requests
+
+# YAML Processing
+PyYAML
+
+# Other Utilities
+regex
+python-dateutil
+ghp-import
