@@ -1,5 +1,6 @@
 site_name: Denoising Project Docu
 theme:
+  logo: assets/logo.svg
   name: material
   features:
     - navigation.tabs
@@ -46,3 +47,7 @@ copyright: Copyright &copy; 2024 Marc Hartung
 
 extra_css:
   - css/extra.css
+
+extra:
+  homepage: 01_index
+
