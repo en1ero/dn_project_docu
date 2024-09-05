@@ -1,6 +1,7 @@
 # Python
 
-## Two main script files
+The Python side of things features two main script files that are used for training new models and denoising RAW + Test images:
+
 * `training_raw.py`
 * `denoise_raw.py`
 
@@ -47,10 +48,14 @@ if __name__ == '__main__':
     
     main(opt)
 ```
+!!! info
 
-**Reminder**: set `use_amp=true` and `use_sigmoid=false` only when using simple loss functions (mae/mse). When using GAN or feature loss set `use_amp=false` and `use_sigmoid=true`.
+    Set `use_amp=true` and `use_sigmoid=false` only when using simple loss functions (mae/mse).
+    
+    When using GAN or feature loss set `use_amp=false` and `use_sigmoid=true`.
 
-The loss function can be defined inside the CombinedLoss (inspect this class to see what loss variants are available) class at this point in the script:
+
+The loss function can be defined inside the CombinedLoss class (inspect `CombinedLoss.py` to see what loss variants are available) at this point in the script:
 ```py
 criterion = CombinedLoss(
     pixel_loss_type='L1', pixel_loss_weight=1,

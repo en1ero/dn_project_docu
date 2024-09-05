@@ -1,3 +1,7 @@
 /* h3 {
     padding-top: 20px;
 } */
+pre code {
+    white-space: pre-wrap;    /* Wrap long lines */
+    word-wrap: break-word;    /* Break long words */
+}

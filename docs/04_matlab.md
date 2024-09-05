@@ -1,6 +1,5 @@
 # MATLAB
 
-## MATLAB project inside root directory
 Locate the `/matlab`dir inside the root dir and open it as your working directoy inside MATLAB to execute all related scripts and functions.
 
 ## How to set up Python for MATLAB
