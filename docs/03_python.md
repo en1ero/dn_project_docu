@@ -1,47 +1,5 @@
 # Python
 
-## How To Replicate This Project
-### 1. Navigate to Project Folder
-```bash
-cd <project folder>
-```
-
-### 2. Check Installed Python Versions
-To see which Python versions are installed on your system, run:
-```bash
-py -0p
-```
-
-### 3. Create a Virtual Environment
-- If Python 3.11 is installed along with other versions, use:
-  ```bash
-  py -3.11 -m venv .venv
-  ```
-- If only Python 3.11 is installed, use:
-  ```bash
-  py -m venv .venv
-  ```
-
-### 4. Resolve Execution Policy Error (Windows Only)
-If you encounter an "about_Execution_Policies" error, run:
-```bash
-Set-ExecutionPolicy Unrestricted -Scope Process
-```
-
-### 5. Activate the Virtual Environment
-
-#### For Windows:
-```cmd
-.venv\Scripts\activate
-pip install -r requirements_win.txt
-```
-
-#### For macOS:
-```bash
-source .venv/bin/activate
-pip install -r requirements_mac.txt
-```
-
 ## Two main script files
 * `training_raw.py`
 * `denoise_raw.py`

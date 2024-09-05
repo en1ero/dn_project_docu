@@ -64,7 +64,7 @@ Here is the provided content formatted as a Markdown document:
 ### 7. Install Required Packages
 - Install the necessary packages with CUDA support into the new virtual environment:
   ```bash
-  pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
+  pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121  
   pip install numpy einops timm torchsummary
   ```
 
@@ -75,6 +75,10 @@ Here is the provided content formatted as a Markdown document:
   ```matlab
   pyenv('Version', 'C:\Users\your_name\matlab_project\.venv\Scripts\pythonw.exe')
   ```
+
+pip uninstall torch torchvision 
+pip cache purge
+
 
 ## Three main scripts
 * `main_compare.m`
