@@ -2,6 +2,8 @@
 
 Here's a guide for installing the project necessities, with separate tutorials for Windows and macOS.
 
+---
+
 ## Python Installation
 
 <!-- Windows -->
@@ -54,6 +56,7 @@ Set-ExecutionPolicy Unrestricted -Scope CurrentUser
 pip install -r requirements_win.txt
 ```
 
+---
 
 <!-- macOS -->
 ### macOS
@@ -92,6 +95,8 @@ source .venv/bin/activate
 ```
 pip install -r requirements_mac.txt
 ```
+
+---
 
 <!-- MATLAB -->
 ## MATLAB Installation
