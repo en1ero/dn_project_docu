@@ -14,17 +14,19 @@ theme:
     - content.code.copy
     - content.code.annotation
   language: en
-  palette: 
+  palette:
     # Palette toggle for light mode
     - scheme: default
+      primary: black
       toggle:
-        icon: material/brightness-7 
+        icon: material/brightness-7
         name: Switch to dark mode
 
     # Palette toggle for dark mode
     - scheme: slate
+      primary: black
       toggle:
-        icon: material/brightness-4
+        icon: material/brightness-3
         name: Switch to light mode
 
 markdown_extensions:
