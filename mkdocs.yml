@@ -39,9 +39,9 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.mark
   - admonition
-  - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+  # - pymdownx.emoji:
+  #     emoji_index: !!python/name:materialx.emoji.twemoji
+  #     emoji_generator: !!python/name:materialx.emoji.to_svg
   
 copyright: Copyright &copy; 2024 Marc Hartung
 
