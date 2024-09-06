@@ -1,6 +1,6 @@
-site_name: Denoising Project Docu
+site_name: Denoising Project Documentation
 theme:
-  logo: assets/logo.svg
+  logo: assets/logo_0.svg
   name: material
   features:
     - navigation.tabs
