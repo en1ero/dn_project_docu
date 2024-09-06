@@ -1,6 +1,6 @@
 # Python
 
-The Python side of things features two main script files that are used for training new models and denoising RAW + Test images:
+__The Python side of things features two main script files that are used for training new models and denoising RAW + Test images:__
 
 * `training_raw.py`
 * `denoise_raw.py`

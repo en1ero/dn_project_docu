@@ -4,6 +4,7 @@ Here's a guide for installing the project necessities, with separate tutorials f
 
 ## Python Installation
 
+<!-- Windows -->
 ### Windows
 
 #### 1. Install Git
@@ -54,11 +55,7 @@ pip install -r requirements_win.txt
 ```
 
 
-
-
-
-
-
+<!-- macOS -->
 ### macOS
 
 #### 1. Install Git
@@ -96,4 +93,90 @@ source .venv/bin/activate
 pip install -r requirements_mac.txt
 ```
 
+<!-- MATLAB -->
 ## MATLAB Installation
+This is how to set up Python for MATLAB.
+
+### 1. Download Python 3.11.9
+- Download from the official site (DO NOT download from MS Store):
+  - [Python 3.11.9 for Windows (amd64)](https://www.python.org/ftp/python/3.11.9/python-3.11.9-amd64.exe)
+- During installation, ensure you check the box for "Add python.exe to PATH".
+
+### 2. Navigate to the MATLAB Project Folder via Windows Command Prompt
+```
+cd <project folder>
+```
+
+### 3. Check Installed Python Versions
+```cmd
+py -0p
+```
+
+### 4. Create a Virtual Environment
+- Make a virtual environment to store Python modules by typing:
+  ```bash
+  py -3.11 -m venv .venv
+  ```
+- If multiple Python versions are installed, use:
+  ```bash
+  py -3.11 -m venv .venv
+  ```
+- If only Python 3.11 is installed, use:
+  ```bash
+  py -m venv .venv
+  ```
+
+### 5. Activate the Virtual Environment
+- Activate the virtual environment via:
+  ```cmd
+  .venv\Scripts\activate
+  ```
+
+### 6. Install Required Packages
+- Install the necessary packages with CUDA support into the new virtual environment:
+  ```bash
+  pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121  
+  pip install numpy einops timm torchsummary
+  ```
+
+### 7. Set the Python Environment in MATLAB
+- In MATLAB console, specify the Python environment:
+  ```matlab
+  pyenv('Version', 'project_folder\.venv\Scripts\pythonw.exe')
+  ```
+- The result should look like this:
+  ```matlab
+  ans = 
+
+  PythonEnvironment with properties:
+
+          Version: "3.11"
+       Executable: "project_folder\.venv\Scripts\pythonw.exe"
+          Library: "C:\Users\user\AppData\Local\Programs\Python\Python311\python311.dll"
+             Home: "project_folder\.venv\Scripts\.venv"
+           Status: NotLoaded
+    ExecutionMode: InProcess
+
+### 8. Restart MATLAB (if necessary)
+- check if pyenv is set correctly in MATLAB console
+  ```matlab
+  pyenv
+  ```
+
+<!-- general info -->
+## Troubleshooting
+For any of the installation steps above, you may need to uninstall the previous installation. Sometimes PyTorch cannot make use of CUDA due to incompatibility.
+
+### First option - Uninstall
+```cmd
+pip uninstall torch torchvision 
+pip cache purge
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121  
+```
+
+### Second option - Remove Virtual Environment
+- Remove the directory recursively
+  ```cmd
+  rmdir /s /q .venv
+  ```
+- Restart from step [Python Step 4](#4-create-a-virtual-environment) or [MATLAB Step 4](#4-create-a-virtual-environment)

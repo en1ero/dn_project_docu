@@ -48,6 +48,6 @@ copyright: Copyright &copy; 2024 Marc Hartung
 extra_css:
   - css/extra.css
 
-extra:
-  homepage: 01_index
+# extra:
+#   homepage: index
 
